@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GL_DuctFS1_2", "GL_DuctFS1_2.vcxproj", "{3532A155-488A-4CCC-9BF8-EEE19B8848D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3532A155-488A-4CCC-9BF8-EEE19B8848D9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3532A155-488A-4CCC-9BF8-EEE19B8848D9}.Debug|Win32.Build.0 = Debug|Win32
+		{3532A155-488A-4CCC-9BF8-EEE19B8848D9}.Release|Win32.ActiveCfg = Release|Win32
+		{3532A155-488A-4CCC-9BF8-EEE19B8848D9}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,378 @@
+2012-11-24
+
+書籍のサンプルファイルを Visual Studio 2010 でビルド＋実行
+するためには、以下のように
+NVIDIA Cg Toolkit + GLEW + GLUI の
+ツールのインストールと各種設定が必要となる。
+
+
+**********************************************************************
+書籍のサンプルを Visual Studio 2010 でビルド＋実行可能となるための準備
+**********************************************************************
+
+01. 下記サイトより NVIDIA Cg Toolkit をダウンロードし、
+	以下のような設定でインストールを行う。
+	
+	https://developer.nvidia.com/cg-toolkit
+	https://developer.nvidia.com/cg-toolkit-download
+	
+	*********************************************************
+	NVIDIA Cg Toolkit 3.1 - April 2012 (3.1.0013)
+	Windows 32/64-bit
+	Cg-3.1_April2012_Setup.exe
+	*********************************************************
+	
+	【インストールの設定】
+	
+	● Select Destination Location
+	
+	C:\Program Files (x86)\NVIDIA Corporation\Cg
+	
+	● Select Components
+	
+	Complete installation (64-bit and 32-bit compiler & libraries)
+	
+	■ Required files to run Cg-based applications and compile Cg programs   18.1 MB
+	■ Library and header files needed to build Cg-based applications         0.3 MB
+	■ Cg documentation                                                      18.9 MB
+	■ Cg example programs with source code                                  47.8 MB
+	■ Microsoft Visual Studio IDE (6.0, 7.1, & 8.0) integration              0.1 MB
+	■ Files to run and link 64-bit (x64) Cg-based applications              25.5 MB
+	
+	Current selection requires at least 111.5 MB of disk space.
+	
+	【参考】NVIDIA Cg Toolkit のサンプルの Visual Studio 2010 用 sln ファイル
+	
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\examples\OpenGL\advanced\OpenGL_Advanced_2010.sln
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\examples\OpenGL\basic\OpenGL_Basic_2010.sln
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\examples\OpenGL\buffers\OpenGL_Buffers_2010.sln
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\examples\OpenGL\glew\glew_2010.sln
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\examples\OpenGL\tessellation\OpenGL_Tessellation_2010.sln
+	
+	NVIDA Cg Toolkit によってインストールされた GLUT の関連ファイルを
+	Visual Studio 2010 の下記の各該当ディレクトリにコピーする。
+	
+	---------------------------------------------------------------------------
+	★ glut.h (32bit版 / 64bit版 共通)
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\include\GL\glut.h
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL\glut.h
+	---------------------------------------------------------------------------
+	★ glut32.lib (32bit版)  [CRC32: 07999D4F]
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\lib\glut32.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\glut32.lib
+	
+	★ glut32.lib (64bit版)  [CRC32: 769193DC]
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\lib.x64\glut32.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\amd64\glut32.lib
+	---------------------------------------------------------------------------
+	★ glut32.dll (32bit版)  [CRC32: B46CFAE7]
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\bin\glut32.dll
+	↓
+	C:\Windows\SysWOW64\glut32.dll
+	
+	★ glut32.dll (64bit版)  [CRC32: 5DD1A7EE]
+	C:\Program Files (x86)\NVIDIA Corporation\Cg\bin.x64\glut32.dll
+	↓
+	C:\Windows\System32\glut32.dll
+	---------------------------------------------------------------------------
+
+02. GLEW を下記サイトよりダウンロードする。
+	http://glew.sourceforge.net/
+	
+	glew-1.9.0-win32.zip
+	glew-1.9.0-win64.zip
+	
+	---------------------------------------------------------------------------
+	★ glew.h (32bit版 / 64bit版 共通)
+	C:\Tools\Develop\GLEW\glew-1.9.0-win32\glew-1.9.0\include\GL\glew.h
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL\glew.h
+	---------------------------------------------------------------------------
+	★ glew32.lib (32bit版)  [CRC32: 89E8D467]
+	C:\Tools\Develop\GLEW\glew-1.9.0-win32\glew-1.9.0\lib\lib\glew32.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\glew32.lib
+	
+	★ glew32.lib (64bit版)  [CRC32: C7B64EB9]
+	C:\Tools\Develop\GLEW\glew-1.9.0-win64\glew-1.9.0\lib\lib\glew32.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\amd64\glew32.lib
+	---------------------------------------------------------------------------
+	★ glew32.dll (32bit版)  [CRC32: 9F97867E]
+	C:\Tools\Develop\GLEW\glew-1.9.0-win32\glew-1.9.0\bin\glew32.dll
+	↓
+	C:\Windows\SysWOW64\glew32.dll
+	
+	★ glew32.dll (64bit版)  [CRC32: 304F25A7]
+	C:\Tools\Develop\GLEW\glew-1.9.0-win64\glew-1.9.0\bin\glew32.dll
+	↓
+	C:\Windows\System32\glew32.dll
+	---------------------------------------------------------------------------
+	
+	Debug 用の glew32d.lib や glew32d.dll の 32bit版や 64bit版のファイルが
+	必要な場合には、ソースファイル
+	glew-1.9.0.zip
+	を解凍して、
+		Debug   - 32bit
+		Release - 32bit
+		Debug   - 64bit
+		Release - 64bit
+	の各構成でビルドして、lib ファイルと dll ファイルを生成する。
+	この場合、ファイルサイズは同じであっても CRC32 は上記と異なる値になるが問題ない。
+	
+	ただし、デフォルトのままだと
+	C:\Tools\Develop\GLEW\glew-1.9.0\build\vc10\glew.sln
+	内の４つのプロジェクト
+		glew_shared
+		glew_static
+		glewinfo
+		visualinfo
+	のうち、glew_shared しか正常にビルドできない。
+	
+	上記の目的のためだけならば、glew_shared のみが必要なので、
+	各構成において、glew_shared のプロジェクトを右クリックして
+	ビルドすると、
+	
+	C:\Tools\Develop\GLEW\glew-1.9.0\lib\glew32.lib  (32bit/64bit Release)
+	C:\Tools\Develop\GLEW\glew-1.9.0\bin\glew32.dll  (32bit/64bit Release)
+	
+	C:\Tools\Develop\GLEW\glew-1.9.0\lib\glew32d.lib (32bit/64bit Debug)
+	C:\Tools\Develop\GLEW\glew-1.9.0\bin\glew32d.dll (32bit/64bit Debug)
+	
+	が生成される。
+	
+	32bit と 64bit とで、同じフォルダに出力するので、
+	生成後にはその都度適当なフォルダにコピーしておく。
+
+03. GLUI を下記サイトよりダウンロードする。
+	http://sourceforge.jp/projects/sfnet_glui/
+	
+	glui-2.36.zip
+	
+	上記のファイルを解凍したら
+	glui-2.36\src\msvc\glui.sln
+	を Visual Studio 2010 で開き、変換ウィザードにより、ソリューションを自動変換する。
+	
+	構成を【 Release 】に変更し【ソリューション・エクスプローラー】から
+	_glui library
+	を選択してから【ビルド】→【_glui library のビルド】を選んでビルドする。
+	
+	http://d.hatena.ne.jp/ks88/20120217/1329498099
+	http://masdel.wordpress.com/2010/06/13/installing-glui-using-vc-on-windows/
+	
+	に記載されているように、ビルドの最中に glui.h の 1716-1720 行で以下のようなエラーが発生する。
+	
+	***********************************************************************************************
+	エラー	1	error C2252: テンプレートの明示的なインスタンス化は名前空間スコープでのみ発生します
+	***********************************************************************************************
+	
+	そこで、glui.h の 1716-1720 行 の
+	
+	***********************************************************************************************
+	#ifdef _MSC_VER
+	// Explicit template instantiation needed for dll
+	template class GLUIAPI std::allocator<GLUI_String>;
+	template class GLUIAPI std::vector<GLUI_String, std::allocator<GLUI_String> >;
+	#endif
+	***********************************************************************************************
+	
+	のコードをクラスの定義の上に移動する。
+	以下に、移動後のコードの状態を示す。
+	
+	***********************************************************************************************
+	#ifdef _MSC_VER
+	// Explicit template instantiation needed for dll
+	template class GLUIAPI std::allocator<GLUI_String>;
+	template class GLUIAPI std::vector<GLUI_String, std::allocator<GLUI_String> >;
+	#endif
+	
+	class GLUIAPI GLUI_CommandLine : public GLUI_EditText
+	{
+	・・・省略・・・
+	***********************************************************************************************
+	
+	再度ビルドすると正常にビルドが完了する。
+	
+	テストとして、【ソリューション・エクスプローラー】から
+	example1
+	を選択してから【ビルド】→【example1 のビルド】を選んでビルドする。
+	ビルドが完了したら、
+	glui-2.36\src\msvc\bin\example1.exe
+	をダブルクリックして、動作が正常なことを確認する。
+	
+	構成を【 Debug 】に変更し【ソリューション・エクスプローラー】から
+	_glui library
+	を選択してから【ビルド】→【_glui library のビルド】を選んでビルドする。
+	
+	生成したライブラリファイル glui32.lib と glui32d.lib のファイルを
+	32bit 用のフォルダを作成し、そのフォルダ内に移動しておく。
+	
+	【構成マネージャー】を開き【アクティブ・ソリューション・プラットフォーム】から
+	【新規作成】を選択し
+		【新しいプラットフォームを入力または選択してください】=【x64】
+		【設定のコピー元】=【Win32】
+		【新しいプロジェクト・プラットフォームを作成する】= ON
+	の設定で【OK】ボタン押し【構成マネージャー】を閉じる。
+	
+	上記と同様にして、x64 の Release と Debug のライブラリファイルを生成する。
+	
+	生成したライブラリファイル glui32.lib と glui32d.lib のファイルを
+	64bit 用のフォルダを作成し、そのフォルダ内に移動しておく。
+	
+	上記で生成した GLUI の関連ファイルを
+	Visual Studio 2010 の下記の各該当ディレクトリにコピーする。
+	
+	---------------------------------------------------------------------------
+	★ glui.h (32bit版 / 64bit版 共通)
+	glui-2.36\src\include\GL\glui.h
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\GL\glui.h
+	---------------------------------------------------------------------------
+	★ glui32.lib (32bit版)   [CRC32: 9EE23D21]
+	glui32.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\glui32.lib
+	
+	★ glui32d.lib (32bit版)  [CRC32: F8A9076E]
+	glui32d.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\glui32d.lib
+	---------------------------------------------------------------------------
+	★ glui32.lib (64bit版)   [CRC32: EF3DDE44]
+	glui32.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\amd64\glui32.lib
+	
+	★ glui32d.lib (64bit版)  [CRC32: D8BB8D43]
+	glui32d.lib
+	↓
+	C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib\amd64\glui32d.lib
+	---------------------------------------------------------------------------
+
+04. 各章のプロジェクトの設定を行う必要がある。
+	
+	■ VS2008 から VS2010 への変換
+		書籍に添付されている CD-ROM は Visual Studio 2008 用なので、
+		プロジェクトを Visual Studio 2010 で開き、
+		変換ウィザードにより、ソリューションを自動変換する。
+	
+	■ インクルードディレクトリの追加
+		【ソリューションエクスプローラー】の中の該当するプロジェクトを右クリックしてから、
+		【プロパティ】を選択し、【構成プロパティ】のダイアログを表示する。
+		
+		【C/C++】→【全般】→【追加のインクルードディレクトリ】の項目をクリックしてから
+		右端に表示された下向き三角をクリックし、<編集...> を選択する。
+		
+		表示された【追加のインクルードディレクトリ】のダイアログの中の、
+		アイコン一覧の左端のフォルダのアイコンをクリックする。
+		
+		新たに追加された空白のインクルード行の右端の【...】ボタンを押して、
+		---------------------------------------------------------------------------
+		C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include
+		---------------------------------------------------------------------------
+		を選択してから【フォルダの選択】ボタンを押す。
+		
+		追加後は、
+		---------------------------------------------------------------------------
+		C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include
+		---------------------------------------------------------------------------
+		のようにカッコの文字コードが変換されるが、修正せずにこのままにして、
+		【OK】ボタンを押す。
+	
+	■ ライブラリディレクトリの追加
+		上記と同様にして、【構成プロパティ】のダイアログにおいて、
+		【リンカー】→【全般】→【追加のライブラリディレクトリ】の項目をクリックしてから、
+		右端に表示された下向き三角をクリックし、<編集...> を選択する。
+		
+		表示された【追加のインクルードディレクトリ】のダイアログの中の、
+		アイコン一覧の左端のフォルダのアイコンをクリックする。
+		
+		新たに追加された空白のインクルード行の右端の【...】ボタンを押して、
+		---------------------------------------------------------------------------
+		C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\lib
+		---------------------------------------------------------------------------
+		を選択してから【フォルダの選択】ボタンを押す。
+		
+		追加後は、
+		---------------------------------------------------------------------------
+		C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib
+		---------------------------------------------------------------------------
+		のようにカッコの文字コードが変換されるが、修正せずにこのままにして、
+		【OK】ボタンを押す。
+	
+	■ 依存ファイルの追加
+		【構成プロパティ】のダイアログにおいて、
+		【リンカー】→【入力】の項目をクリックしてから、
+		右端に表示された下向き三角をクリックし、<編集...> を選択する。
+		
+		表示された【追加の依存ファイル】のダイアログのテキストボックス内に、
+		以下のようなライブラリを追加する。
+		
+		● Release 構成の場合
+		---------------------------------------------------------------------------
+		glui32.lib;glew32.lib
+		---------------------------------------------------------------------------
+		
+		● Debug 構成の場合
+		---------------------------------------------------------------------------
+		glui32d.lib;glew32d.lib
+		---------------------------------------------------------------------------
+		
+		ただし、プロジェクトに GLEW の API のみで、GLUI の API を使っていない場合は、
+		glui32.lib や glui32d.lib を追加する必要はない。
+	
+	■ 設定の完了
+		プロパティページの下の【OK】ボタンを押して設定を完了する。
+
+
+
+【注意】
+	***********************************************************************************************
+	エラー	2	error LNK2001: 外部シンボル "__imp____glewDeleteShader" は未解決です。
+	***********************************************************************************************
+	や
+	***********************************************************************************************
+	エラー	2	error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。
+	値 '0' が 2 の値 'xxxxx.obj' と一致しません。
+	xxxxx\glui32.lib(glui.obj)
+	***********************************************************************************************
+	のように、リンク時のエラー (error LNKxxxx) が発生した場合は、
+	依存ファイルの追加の設定が正常に行われていない可能性がある。
+	
+	【注意】
+	Release: x64 や Debug: x64 の構成でビルドは行えるが、実行時に
+	***********************************************************************************************
+	アプリケーションを正しく起動できませんでした (0xc000007b)。
+	[OK] をクリックしてアプリケーションを閉じてください。
+	***********************************************************************************************
+	のエラーが発生した場合は、実行時に、対応する glew32.dll が正常にロードできていなかったり、
+	64bit版の Exe から 32bit版の DLL が参照されてる可能性がある。
+	一番簡単な対処方法は、ビルドして生成された実行ファイル ***.exe
+	と同じフォルダに、対応する 64bit版の glew32.dll をコピーしてから実行すれば、
+	正常に動作する。
+
+
+【参考】
+NVIDIA Cg Toolkit のサンプルのプロジェクト設定情報
+
+プロジェクトの構成プロパティ:
+	C/C++
+		追加のインクルードディレクトリ
+			..\..\glew\include;$(CG_INC_PATH);c:\Program Files\NVIDIA Corporation\Cg\include;%(AdditionalIncludeDirectories)
+	リンカー
+		追加のライブラリディレクトリ
+			$(CG_LIB_PATH);c:\Program Files\NVIDIA Corporation\Cg\lib;%(AdditionalLibraryDirectories)
+		追加の依存ファイル
+			cg.lib;cgGL.lib;glut32.lib;glu32.lib;opengl32.lib;gdi32.lib;%(AdditionalDependencies)
+
+
+
+■ 環境設定の際のコピー＆ペースト用の設定項目
+
+C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include
+C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib
+glui32d.lib;glew32d.lib;
+glui32.lib;glew32.lib;

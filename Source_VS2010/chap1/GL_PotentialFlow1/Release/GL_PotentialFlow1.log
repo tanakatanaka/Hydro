@@ -1,0 +1,2 @@
+﻿  glPotentialFlow1.cpp
+c:\programtest\hydrodynamics\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(13): fatal error C1083: include ファイルを開けません。'GL/glut.h':No such file or directory

@@ -1,0 +1,29 @@
+2012-11-12
+
+以下のように修正しないと、
+Release モードにおいて、逆順に読み込んでバイトを結合してしまうので、
+画像読み込みが正常に動作しない。
+以下のように修正すれば、Release モードでも Debug モードでも
+画像読み込みが正常に行われる。
+
+********************************************************
+bmpLoadSave.h
+--------------------------------------------------------
+static int get2Byte(FILE *f)
+{
+	int c1 = fgetc(f) & 0xFF;
+	int c2 = fgetc(f) & 0xFF;
+	return  (c1 | (c2 << 8));
+//	return fgetc(f) | fgetc(f) << 8;
+}
+
+static int get4Byte(FILE *f)
+{
+	int c1 = fgetc(f) & 0xFF;
+	int c2 = fgetc(f) & 0xFF;
+	int c3 = fgetc(f) & 0xFF;
+	int c4 = fgetc(f) & 0xFF;
+	return (c1 | (c2 << 8) | (c3 << 16) | (c4 << 24));
+//	return fgetc(f) | fgetc(f) << 8 | fgetc(f) << 16 | fgetc(f) << 24;
+}
+********************************************************
