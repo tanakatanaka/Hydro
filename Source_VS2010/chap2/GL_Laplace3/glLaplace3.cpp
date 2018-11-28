@@ -409,9 +409,15 @@ void calculatePsi()
 void drawContour(float PP[][NUM_MAX_Y], float minP, float maxP, Color color)
 {
 	glLineWidth(2.0);
-	if(color == BLACK) glColor3f(0.0, 0.0, 0.0);
-	else if(color == RED) glColor3f(1.0, 0.0, 0.0);
-	else if(color == GREEN) glColor3f(0.0, 1.0, 0.0);
+	if (color == BLACK)
+	{
+		glColor3f(0.0, 0.0, 0.0);
+	}
+	else if(color == RED) 
+	{
+		glColor3f(1.0, 0.0, 0.0);
+	}
+	else if (color == GREEN) glColor3f(0.0, 1.0, 0.0);
 	else if(color == BLUE) glColor3f(0.0, 0.0, 1.0);
 	else if(color == DARK_RED) glColor3f(0.5, 0.0, 0.0);
 	else if(color == DARK_GREEN) glColor3f(0.0, 0.5, 0.0);

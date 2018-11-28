@@ -1,1 +1,10 @@
-﻿  GL_PotentialFlow1.vcxproj -> C:\ProgramTest\Hydrodynamics\Source_VS2010\chap1\GL_PotentialFlow1\Debug\GL_PotentialFlow1.exe
+﻿  glPotentialFlow1.cpp
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 'c1': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 'theta1': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 's2': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 'r2': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 's1': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 'r1': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 'c2': ローカル変数は 1 度も使われていません。
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap1\gl_potentialflow1\glpotentialflow1.cpp(319): warning C4101: 'theta2': ローカル変数は 1 度も使われていません。
+  GL_PotentialFlow1.vcxproj -> C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\chap1\GL_PotentialFlow1\Debug\GL_PotentialFlow1.exe

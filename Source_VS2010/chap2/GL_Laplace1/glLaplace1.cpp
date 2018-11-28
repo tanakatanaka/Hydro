@@ -287,6 +287,7 @@ void calculate()
 	}
 	//速度ベクトルの計算
 	//格子点の速度ベクトル(上下左右の流れ関数の差で求める)
+	
 	for(i = 1; i < rect.nMeshX; i++)
 		for (j = 1; j < rect.nMeshY; j++)
 		{

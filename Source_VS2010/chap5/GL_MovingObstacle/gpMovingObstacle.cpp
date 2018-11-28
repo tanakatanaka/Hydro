@@ -234,7 +234,7 @@ void display(void)
 		if(flagStep) flagFreeze = true;	
 		count ++;
 
-		calcObsPos();
+		//calcObsPos();
 /*
 		for(int k = 0; k < countP; k++)
 		{

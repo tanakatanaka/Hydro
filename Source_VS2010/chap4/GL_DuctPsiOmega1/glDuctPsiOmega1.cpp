@@ -116,10 +116,10 @@ void init(void)
 	float eps = 0.5;
 	int nMeshX1 = floor((rect.obs_left - rect.obs_thick/2.0) / rect.delta.x + eps);//障害物左端位置
 	int nMeshX2 = floor((rect.obs_left + rect.obs_thick/2.0) / rect.delta.x + eps);//障害物右端位置
-	int nMeshY2 = floor((rect.size.y + rect.obs_width) / (2.0 * rect.delta.y) + eps);//障害物上端位置
-	int nMeshY1 = floor((rect.size.y - rect.obs_width) / (2.0 * rect.delta.y) + eps);//障害物下端位置
+	int nMeshY2 = floor((rect.size.y ) / (2.0 * rect.delta.y) + eps);//障害物上端位置
+	int nMeshY1 = floor((rect.size.y ) / (2.0 * rect.delta.y) + eps);//障害物下端位置
 
-	int nMeshY_ObsW = floor(rect.obs_width / rect.delta.y + eps);
+	int nMeshY_ObsW = floor( eps);
 	//格子間隔の整数倍か
 	float left1, left2, bottom1, bottom2;
 	left1 = rect.delta.x * (float)(nMeshX1);//左端から障害物左端まで
@@ -235,7 +235,7 @@ void display(void)
 
 	if(flagP_Start) drawParticle(deltaT);//粒子アニメーション
 
-	drawObstacle();
+	//drawObstacle();
 	//発散しないための目安を知るため
 	float Courant, diff_num;
 	if(rect.delta.x < rect.delta.y)
@@ -466,6 +466,7 @@ void drawRegion()
 	//上側
 	glVertex2f(rect.left0.x, rect.left0.y + scale.y * rect.size.y); 
 	glVertex2f(rect.left0.x + scale.x * rect.size.x, rect.left0.y + scale.y * rect.size.y);
+/*
 	//障害物左端
 	glVertex2f(rect.left0.x + scale.x * (rect.obs_left - rect.obs_thick/2.0), rect.left0.y + scale.y * (rect.size.y - rect.obs_width)/2.0);
 	glVertex2f(rect.left0.x + scale.x * (rect.obs_left - rect.obs_thick/2.0), rect.left0.y + scale.y * (rect.size.y + rect.obs_width)/2.0);
@@ -478,6 +479,7 @@ void drawRegion()
 	//障害物下部
 	glVertex2f(rect.left0.x + scale.x * (rect.obs_left - rect.obs_thick/2.0), rect.left0.y + scale.y * (rect.size.y - rect.obs_width) / 2.0);
 	glVertex2f(rect.left0.x + scale.x * (rect.obs_left + rect.obs_thick/2.0), rect.left0.y + scale.y * (rect.size.y - rect.obs_width) / 2.0);
+*/
 	glEnd();
 
 }

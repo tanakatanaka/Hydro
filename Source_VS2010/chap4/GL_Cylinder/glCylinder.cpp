@@ -203,8 +203,12 @@ void display(void)
 	}
 
 	if( flagStream ) drawContour((float)minPsi, (float)maxPsi , Psi, BLACK);
-	if( flagOmega ) drawContour( minOmega, maxOmega, Omg, RED);
-	if( flagVelocity ) drawVelocity();
+	if (flagOmega)
+	{
+		drawContour(minOmega, maxOmega, Omg, RED);
+	}
+
+	if (flagVelocity) drawVelocity();
 	if( flagGrid ) drawGrid();
 
 	//”­ŽU‚µ‚È‚¢‚½‚ß‚Ì–ÚˆÀ‚ð’m‚é‚½‚ß

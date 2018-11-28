@@ -578,6 +578,7 @@ void rendering()
 	GLint sizeYLoc = glGetUniformLocation(shader_prog3, "sizeY");
 	glUniform1f(sizeYLoc, rect.size.y);
 
+
 	GLint adjustHLoc = glGetUniformLocation(shader_prog3, "adjustH");
 	glUniform1f(adjustHLoc, adjustH);
 	GLint colorLoc = glGetUniformLocation(shader_prog3, "color");
