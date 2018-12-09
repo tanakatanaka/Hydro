@@ -4,57 +4,18 @@ c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(16): error C4996: 'fop
   MainView.cpp
 c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(16): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 'fopen' の宣言を確認してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(21): error C2065: 'Assist3d': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(21): error C2228: '.win_width' の左側はクラス、構造体、共用体でなければなりません
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(21): note: 型は 'unknown-type' です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(21): error C2228: '.win_height' の左側はクラス、構造体、共用体でなければなりません
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(21): note: 型は 'unknown-type' です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(21): error C2660: 'glutInitWindowSize': 関数に 1 個の引数を指定できません。
-  c:\programtest\hydrodynamics\trunk\setup_files\gl\glut.h(399): note: 'glutInitWindowSize' の宣言を確認してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(23): error C2065: 'Assist3d': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(23): error C2228: '.win_x0' の左側はクラス、構造体、共用体でなければなりません
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(23): note: 型は 'unknown-type' です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(23): error C2228: '.win_y0' の左側はクラス、構造体、共用体でなければなりません
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(23): note: 型は 'unknown-type' です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(23): error C2660: 'glutInitWindowPosition': 関数に 1 個の引数を指定できません。
-  c:\programtest\hydrodynamics\trunk\setup_files\gl\glut.h(398): note: 'glutInitWindowPosition' の宣言を確認してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(25): error C2065: 'Assist3d': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(25): error C2228: '.main_window' の左側はクラス、構造体、共用体でなければなりません
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(25): note: 型は 'unknown-type' です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(27): error C2065: 'resize': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(29): error C2065: 'display': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(26): error C3867: 'Assist3D::Resize': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
   MyGLUI .cpp
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(24): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(25): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(26): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(27): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(28): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(37): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(38): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(39): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(40): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(41): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(42): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(43): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(75): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(119): error C2065: 'win_x0': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(119): error C2065: 'win_y0': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(119): error C2065: 'win_height': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(121): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(123): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(126): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(128): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(131): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(133): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(136): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(138): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(141): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(144): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(147): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(149): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(152): error C3867: 'MyGLUI::control_cb': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(286): error C3861: 'setCamera': 識別子が見つかりませんでした
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(292): error C3861: 'setCamera': 識別子が見つかりませんでした
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(298): error C3861: 'setCamera': 識別子が見つかりませんでした
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(300): error C2065: 'view0': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(191): error C2065: 'flagObsStop': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(192): error C2065: 'flagResetting': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(193): error C3861: 'initData': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(197): error C2065: 'flagObsStop': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(199): error C3861: 'initObjectLength': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(200): error C2065: 'flagParamShow': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(219): error C2065: 'glui2': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(219): error C2227: '->show' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(219): note: 型は 'unknown-type' です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(223): error C2065: 'glui2': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(223): error C2227: '->hide' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
+  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(223): note: 型は 'unknown-type' です。
   コードを生成中...

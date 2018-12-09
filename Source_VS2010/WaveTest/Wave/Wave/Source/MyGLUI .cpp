@@ -1,13 +1,13 @@
 #include"MyGLUI.h"
 
-void MyGLUI::Initialize(std::unique_ptr<Assist3D>&& arg_assist3d)
+void MyGLUI::Initialize()
 {
-	assist3d = std::move(arg_assist3d);
+	int a = 0;
 }
 
 void MyGLUI::setupGLUI()
 {
-	glui = GLUI_Master.create_glui("GLUI-MAIN", 0, assist3d->win_x0 + assist3d->win_width + 10, assist3d->win_y0);
+	glui = GLUI_Master.create_glui("GLUI-MAIN", 0, assist3d.win_x0 + assist3d.win_width + 10, assist3d.win_y0);
 
 	paraPanel = new GLUI_Panel(glui, "Parameters");
 	//left_edit = new GLUI_EditText(paraPanel,"obs_left", &rect.obs_left);
@@ -116,7 +116,7 @@ void MyGLUI::setupGLUI()
 	glui->set_main_gfx_window(main_window);
 
 	//********　　glui2　　****************
-	glui2 = GLUI_Master.create_glui("GLUI-CAMERA", 0, win_x0, win_y0 + win_height + 30);
+	glui2 = GLUI_Master.create_glui("GLUI-CAMERA", 0, assist3d.win_x0, assist3d.win_y0 + assist3d.win_height + 30);
 	//カメラ操作
 	dollyP_btn = new GLUI_Button(glui2, "Dolly+", DOLLY_P_ID, control_cb);
 	dollyP_btn->set_w(60);
@@ -154,63 +154,70 @@ void MyGLUI::setupGLUI()
 	glui2->set_main_gfx_window(main_window);
 }
 
-void MyGLUI::control_cb(int control)
+void control_cb(int control)
 {
 	double v1 = 2.0;//光源
 	double v2 = 1.0;//カメラ操作
 
-	Assist3D::View &view = assist3d->view;
+	Assist3D::View &view = assist3d.view;
 
 					//計算
 	if (control == START_ID) 
 	{
-		assist3d->flagStart = 1;
-		assist3d->flagFreeze = 0;
-		assist3d->flagStep = 0;
+		assist3d.flagStart = 1;
+		assist3d.flagFreeze = 0;
+		assist3d.flagStep = 0;
 	}
 	else if (control == FREEZE_ID) 
 	{
-		if (assist3d->flagFreeze == 0)
+		if (assist3d.flagFreeze == 0)
 		{
-			assist3d->flagFreeze = 1;
+			assist3d.flagFreeze = 1;
 		}
 		else 
 		{ 
-			assist3d->flagFreeze = 0;
-			assist3d->flagStep = 0;
+			assist3d.flagFreeze = 0;
+			assist3d.flagStep = 0;
 		}
 	}
-	else if (control == STEP_ID) {
-		assist3d->flagStep = 1;
-		assist3d->flagFreeze = 0;
+	else if (control == STEP_ID) 
+	{
+		assist3d.flagStep = 1;
+		assist3d.flagFreeze = 0;
 	}
 	else if (control == RESET_ID)
 	{
-		assist3d->flagStart = 0;
-		assist3d->flagFreeze = 0;
+		assist3d.flagStart = 0;
+		assist3d.flagFreeze = 0;
 		flagObsStop = 0;
-		flagResetting = 0;
+		
 		initData();
 	}
 	else if (control == OBS_STOP_ID)
 	{
 		flagObsStop = !flagObsStop;
 	}
-	else if (control == INIT_LENGTH_ID) initObjectLength();
-	else if (control == PARAMETER_ID) flagParamShow = !flagParamShow;
+	else if (control == INIT_LENGTH_ID)
+	{
+		initObjectLength();
+	}
+	else if (control == PARAMETER_ID)
+	{
+		flagParamShow = !flagParamShow;
+	}
 
 	//光源操作
-	else if (control == LIGHTX_P_ID) { assist3d->lightPos[0] += v1; }
-	else if (control == LIGHTX_M_ID) { assist3d->lightPos[0] -= v1; }
-	else if (control == LIGHTY_P_ID) { assist3d->lightPos[1] += v1; }
-	else if (control == LIGHTY_M_ID) { assist3d->lightPos[1] -= v1; }
-	else if (control == LIGHTZ_P_ID) { assist3d->lightPos[2] += v1; }
-	else if (control == LIGHTZ_M_ID) { assist3d->lightPos[2] -= v1; }
+	else if (control == LIGHTX_P_ID) { assist3d.lightPos[0] += v1; }
+	else if (control == LIGHTX_M_ID) { assist3d.lightPos[0] -= v1; }
+	else if (control == LIGHTY_P_ID) { assist3d.lightPos[1] += v1; }
+	else if (control == LIGHTY_M_ID) { assist3d.lightPos[1] -= v1; }
+	else if (control == LIGHTZ_P_ID) { assist3d.lightPos[2] += v1; }
+	else if (control == LIGHTZ_M_ID) { assist3d.lightPos[2] -= v1; }
 	else if (control == LIGHT_RESET_ID)
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			assist3d->lightPos[i] = assist3d->lightPos0[i];
+			assist3d.lightPos[i] = assist3d.lightPos0[i];
 		}
 	}
 
@@ -228,27 +235,27 @@ void MyGLUI::control_cb(int control)
 	{
 		if (control == DOLLY_P_ID)
 		{ //近づく
-			if (!assist3d->flagOrtho)
+			if (!assist3d.flagOrtho)
 			{
 				view.dist -= v2;
 			}
 			else
 			{
-				assist3d->ortho_scale -= 0.5;
+				assist3d.ortho_scale -= 0.5;
 			}
 		}
 		else
 		{//遠ざかる
-			if (!assist3d->flagOrtho)
+			if (!assist3d.flagOrtho)
 			{
 				view.dist += v2;
 			}
 			else
 			{
-				assist3d->ortho_scale += 0.5;
+				assist3d.ortho_scale += 0.5;
 			}
 		}
-		assist3d->SetCamera();
+		assist3d.SetCamera();
 	}
 	else if (control == PAN_P_ID || control == PAN_M_ID)//pan
 	{
@@ -283,21 +290,21 @@ void MyGLUI::control_cb(int control)
 	{
 		if (control == ZOOM_P_ID) view.fovY -= v2;//zoom in
 		else view.fovY += v2;//zoom out	
-		setCamera();
+		assist3d.SetCamera();
 	}
 	else if (control == TUMBLE_P_ID || control == TUMBLE_M_ID)//tumble
 	{
 		if (control == TUMBLE_P_ID) view.phi += v2;
 		else                        view.phi -= v2;
-		setCamera();
+		assist3d.SetCamera();
 	}
 	else if (control == CRANE_P_ID || control == CRANE_M_ID)//crane
 	{
 		if (control == CRANE_P_ID) view.theta += v2;
 		else                       view.theta -= v2;
-		setCamera();
+		assist3d.SetCamera();
 	}
-	else if (control == CAMERA_RESET_ID) view = view0;
+	else if (control == CAMERA_RESET_ID) view = assist3d.view0;
 }
 
 
