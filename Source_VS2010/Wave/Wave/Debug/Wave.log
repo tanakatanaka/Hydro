@@ -1,0 +1,130 @@
+﻿  MainWindow.cpp
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(34): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(48): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(153): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2653): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2654): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2688): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2691): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2726): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2727): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2728): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(15): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(16): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(17): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(18): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(19): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(20): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(21): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(22): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(23): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(24): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(25): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(26): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(27): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(28): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(70): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(72): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\assist3d.h(37): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\assist3d.h(38): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\assist3d.h(39): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(45): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(46): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(47): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(114): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(115): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(152): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(153): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish2.h(44): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish2.h(109): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish2.h(110): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish2.h(146): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myfish2.h(147): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\wave\wave\source\mainwindow.cpp(962): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\wave\wave\source\mainwindow.cpp(965): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\wave\wave\source\mainwindow.cpp(968): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\wave\wave\source\mainwindow.cpp(1093): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\wave\wave\source\mainwindow.cpp(1094): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+  Wave.cpp
+  コードを生成中...
+glui32.lib(glui.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_control.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_control.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_button.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_button.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_checkbox.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_checkbox.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_panel.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_panel.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_rollout.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_rollout.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_add_controls.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_add_controls.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_edittext.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_edittext.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_spinner.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_spinner.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_string.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_string.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_node.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_node.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_bitmaps.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_bitmaps.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_window.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_window.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_column.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_column.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_radio.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_radio.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_separator.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_separator.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_statictext.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_statictext.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_listbox.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_listbox.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_rotation.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_rotation.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_translation.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_translation.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_mouse_iaction.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(glui_mouse_iaction.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(algebra3.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(algebra3.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(arcball.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(arcball.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+glui32.lib(quaternion.obj) : error LNK2038: '_ITERATOR_DEBUG_LEVEL' の不一致が検出されました。値 '0' が 2 の値 'MainWindow.obj' と一致しません。
+glui32.lib(quaternion.obj) : error LNK2038: 'RuntimeLibrary' の不一致が検出されました。値 'MD_DynamicRelease' が MDd_DynamicDebug の値 'MainWindow.obj' と一致しません。
+LINK : warning LNK4098: defaultlib 'MSVCRT' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
+MainWindow.obj : error LNK2019: 未解決の外部シンボル __imp__glewInit@0 が関数 "public: int __thiscall MainWindow::Initialize(int,char * *)" (?Initialize@MainWindow@@QAEHHPAPAD@Z) で参照されました。
+MainWindow.obj : error LNK2019: 未解決の外部シンボル __imp__glewGetErrorString@4 が関数 "void __cdecl initGlsl(unsigned int *,char const *,char const *)" (?initGlsl@@YAXPAIPBD1@Z) で参照されました。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewActiveTexture" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewAttachShader" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewCompileShader" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewCreateProgram" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewCreateShader" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewDeleteProgram" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewDeleteShader" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGetProgramInfoLog" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGetProgramiv" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGetShaderInfoLog" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGetShaderiv" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGetUniformLocation" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewLinkProgram" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewShaderSource" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewUniform1f" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewUniform1i" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewUniform3fv" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewUniformMatrix4fv" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewUseProgram" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewBindFramebufferEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewBindRenderbufferEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewDeleteFramebuffersEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewDeleteRenderbuffersEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewFramebufferRenderbufferEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewFramebufferTexture2DEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGenFramebuffersEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewGenRenderbuffersEXT" は未解決です。
+MainWindow.obj : error LNK2001: 外部シンボル "__imp____glewRenderbufferStorageEXT" は未解決です。
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 未解決の外部シンボル _main が関数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) で参照されました。
+C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave\Debug\Wave.exe : fatal error LNK1120: 31 件の未解決の外部参照
