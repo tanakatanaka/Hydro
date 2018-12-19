@@ -1,0 +1,39 @@
+﻿  gpRefraction.cpp
+c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 'fopen' の宣言を確認してください
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(34): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(48): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(153): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2653): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2654): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2688): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2691): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2726): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2727): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(2728): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(15): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(16): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(17): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(18): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(19): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(20): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(21): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(22): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(23): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(24): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(25): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(26): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(27): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(28): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(70): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(72): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\support3d.h(37): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\support3d.h(38): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\support3d.h(39): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap6\gp_refraction\gprefraction.cpp(860): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap6\gp_refraction\gprefraction.cpp(863): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap6\gp_refraction\gprefraction.cpp(866): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap6\gp_refraction\gprefraction.cpp(975): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap6\gp_refraction\gprefraction.cpp(976): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\chap6\gp_refraction\gprefraction.cpp(977): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+  GP_Refraction.vcxproj -> C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\chap6\GP_Refraction\Debug\GP_Refraction.exe
