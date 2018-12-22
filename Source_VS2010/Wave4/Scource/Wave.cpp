@@ -26,7 +26,6 @@ GLSLによるシェーディング
 #include <math.h>
 #include <GL/glew.h>
 #include <GL/glui.h>
-#include "../../myGlsl.h"
 #include "../../myMath6.h"
 #include "../../myPrimitive6.h"
 #include "../../rigid.h"
@@ -168,15 +167,16 @@ int Wave::Initialize(int argc, char** argv)
 	//初期設定
 	glewInit();//framebufferを利用するときに必要
 	init();
-	initGlsl(&shader1, "simulation.vert", "calcVelocityX.frag");
-	initGlsl(&shader2, "simulation.vert", "calcVelocityY.frag");
-	initGlsl(&shader3, "simulation.vert", "waveVel.frag");
-	initGlsl(&shader4, "simulation.vert", "wavePos.frag");
-	initGlsl(&shader5, "rendering.vert", "rendering.frag");
-	initGlsl(&shader6, "simulation.vert", "particle.frag");//粒子用
-	initGlsl(&shader7, "renderingP.vert");//粒子用
-	initGlsl(&shader8, "projection.vert", "projection.frag");//投影マッピング用
 
+	subGlsl.InitGlsl(&shader1, "simulation.vert", "calcVelocityX.frag");
+	subGlsl.InitGlsl(&shader2, "simulation.vert", "calcVelocityY.frag");
+	subGlsl.InitGlsl(&shader3, "simulation.vert", "waveVel.frag");
+	subGlsl.InitGlsl(&shader4, "simulation.vert", "wavePos.frag");
+	subGlsl.InitGlsl(&shader5, "rendering.vert", "rendering.frag");
+	subGlsl.InitGlsl(&shader6, "simulation.vert", "particle.frag");//粒子用
+	subGlsl.InitGlsl(&shader7, "renderingP.vert");//粒子用
+	subGlsl.InitGlsl(&shader8, "projection.vert", "projection.frag");//投影マッピング用
+	
 	setupGLUI();//myGLUI.hに実装
 
 	//イベント処理ループに入る

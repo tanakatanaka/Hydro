@@ -1,6 +1,4 @@
 ﻿  Wave.cpp
-c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(13): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 'fopen' の宣言を確認してください
 c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(34): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(48): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\myprimitive6.h(153): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
@@ -30,6 +28,8 @@ c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(72): warning C4838: 'do
 c:\programtest\hydrodynamics\trunk\source_vs2010\support3d.h(37): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\support3d.h(38): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\support3d.h(39): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 'fopen' の宣言を確認してください
 c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(45): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(46): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\myfish1.h(47): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
@@ -47,29 +47,4 @@ c:\programtest\hydrodynamics\trunk\source_vs2010\wave4\scource\wave.cpp(985): wa
 c:\programtest\hydrodynamics\trunk\source_vs2010\wave4\scource\wave.cpp(988): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\wave4\scource\wave.cpp(1113): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
 c:\programtest\hydrodynamics\trunk\source_vs2010\wave4\scource\wave.cpp(1114): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
-glui32d.lib(algebra3.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(algebra3.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(arcball.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(arcball.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_add_controls.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_add_controls.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_bitmaps.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_bitmaps.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_bitmap_img_data.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_bitmap_img_data.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_button.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_button.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_checkbox.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_checkbox.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_column.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_column.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_control.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_control.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_edittext.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_edittext.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_listbox.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_listbox.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_mouse_iaction.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_mouse_iaction.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_node.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_node.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_panel.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_panel.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_radio.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_radio.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_rollout.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_rollout.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_rotation.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_rotation.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_separator.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_separator.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_spinner.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_spinner.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_statictext.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_statictext.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_string.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_string.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_translation.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_translation.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(glui_window.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(glui_window.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
-glui32d.lib(quaternion.obj) : warning LNK4099: PDB '_glui library.pdb' が 'glui32d.lib(quaternion.obj)' で、または 'C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\_glui library.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。
   GP_Caustics2.vcxproj -> C:\ProgramTest\Hydrodynamics\trunk\Source_VS2010\Wave4\Debug\Wave.exe

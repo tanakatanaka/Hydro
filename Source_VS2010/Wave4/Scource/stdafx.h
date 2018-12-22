@@ -6,3 +6,8 @@
 #pragma once
 
 
+#include <windows.h>
+#include <math.h>
+#include <GL/glew.h>
+#include <GL/glui.h>
+#include "../../myGlsl.h"

@@ -1,7 +1,13 @@
 //myGlsl.h
 
-GLuint vertexShader, fragmentShader;
+static GLuint vertexShader;
+static GLuint fragmentShader;
+static void readShaderCompile(GLuint shader, const char *file);
+static void initGlsl(GLuint *program, const char *vertexFile);
+static void initGlsl(GLuint *program, const char *vertexFile, const char *fragmentFile);
+static void link(GLuint prog);
 //shader fileを読み込みコンパイルする
+
 void readShaderCompile(GLuint shader, const char *file)
 {
   FILE *fp;
@@ -11,15 +17,19 @@ void readShaderCompile(GLuint shader, const char *file)
   
   // ファイルを開く
   fp = fopen(file, "rb");
-  if(!fp) printf("ファイルを開くことができません %s\n", file);
-  
+  if (!fp)
+  {
+	  printf("ファイルを開くことができません %s\n", file);
+  }
+
   //ファイルの末尾に移動し現在位置を得る 
   fseek(fp, 0, SEEK_END);
   size = ftell(fp);//ファイルサイズを取得
   
   // ファイルサイズのメモリを確保 
   buf = (GLchar *)malloc(size);
-  if (buf == NULL) {
+  if (buf == NULL) 
+  {
     printf("メモリが確保できませんでした \n");
   }
   
