@@ -53,7 +53,7 @@
       <Filter>ソース ファイル\Scene\CausticsSceen</Filter>
     </ClInclude>
     <ClInclude Include="Source\MyGLUI.h">
-      <Filter>ソース ファイル</Filter>
+      <Filter>ソース ファイル\Scene\CausticsSceen</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

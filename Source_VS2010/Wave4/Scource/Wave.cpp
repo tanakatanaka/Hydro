@@ -22,6 +22,7 @@ GLSLによるシェーディング
 鉛直軸はｚ軸
 */
 
+#pragma once
 #include <windows.h>
 #include <math.h>
 #include <GL/glew.h>

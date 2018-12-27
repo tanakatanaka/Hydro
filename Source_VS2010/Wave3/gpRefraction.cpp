@@ -24,11 +24,11 @@ GLSLによるシェーディング
 #include <math.h>
 #include <GL/glew.h>
 #include <GL/glui.h>
-#include "../../myGlsl.h"
-#include "../../myMath6.h"
-#include "../../myPrimitive6.h"
-#include "../../rigid.h"
-#include "../../support3D.h"
+#include "../myGlsl.h"
+#include "../myMath6.h"
+#include "../myPrimitive6.h"
+#include "../rigid.h"
+#include "../support3D.h"
 #include "myGLUI.h"
 
 //関数のプロトタイプ宣言

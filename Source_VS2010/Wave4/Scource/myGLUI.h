@@ -13,7 +13,9 @@ struct Rect
 	int meshX;     //•ªŠ„”(X)
 	int meshY;     //•ªŠ„”(Y)
 };
-Rect rect = {
+
+Rect rect = 
+{
 	Vector2D(20.0, 20.0),//size
 	3.0, 0.5, 10.0, 2.0,  //obs_left, radius, posY, length
 	200,//meshX

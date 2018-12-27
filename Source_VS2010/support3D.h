@@ -1,4 +1,3 @@
-
 void resize(int w, int h);
 
 //Windowのサイズ,位置
@@ -60,7 +59,8 @@ struct View
 	float nearZ; //前方クリップ面(近平面)
 	float farZ;  //後方クリップ面(遠平面)
 };
-View view = { 
+View view = 
+{ 
 	Vector3D(),             //pos(視点,仮設定）
 	Vector3D(0.0, 0.0, 7.0),//cnt(注視点） 
 	100.0, 15.0, 0.0,       //dist, theta, phi

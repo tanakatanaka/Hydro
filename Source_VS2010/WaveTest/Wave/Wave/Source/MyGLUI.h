@@ -39,16 +39,43 @@
 #define ZOOM_M_ID 420
 #define CAMERA_RESET_ID 430
 
-Assist3D assist3d;
-void control_cb(int control);
-GLUI *glui, *glui2;
-void initData();
-void initData();
-
-
 int flagObsStop = 0;
 int flagResetting = 0;
 int flagParamShow = 1;
+
+void control_cb(int control);
+
+//解析用データのサイズ
+int texWidth;
+int texHeight;//全格子数
+
+//解析用データ配列
+float *velX;//速度VelXと圧力
+float *velY;//速度VelYと渦度
+float *wave;//波の高さの速度，位置
+GLubyte *caus;
+float *particle;//粒子位置
+GLuint texID[6];//texture object
+GLuint fbo[5];//frame buffer object
+GLuint rbo;   //render buffer object
+
+GLenum target = GL_TEXTURE_RECTANGLE_ARB;
+GLenum internalFormat = GL_RGBA32F_ARB;
+GLenum format = GL_RGBA;
+GLenum type = GL_FLOAT;
+
+
+enum Type
+{
+	INSIDE, LEFT, RIGHT, TOP, BOTTOM, OBS_LEFT, OBS_TOP, OBS_BOTTOM,
+	OBS_RIGHT, OBSTACLE, OBS_UL, OBS_UR, OBS_LL, OBS_LR
+};
+Type g_type[NUM_MAX_X][NUM_MAX_Y]; //格子点のタイプ
+
+int NX, NY, NX1, NY1, NX2, NY2;
+float DX, DY;
+float direction = 1.0;//障害物直線移動方向
+
 
 class MyGLUI
 {
@@ -78,38 +105,37 @@ class MyGLUI
 		void initObjectLength();
 		void setGLUI();
 		void GetAssist3d();
+		void initData();
 
 		int main_window;//GLUTで作るWindowのID
-
-	private:
-
-		int flagWireframe = 0;
-		int flagGrid = 0;
-		int flagIdeal = 1;
-		int flagShowParticle = 0;
-		int flagCoordShow = 0;
-		int flagRotation = 0;//回転運動
-		int flagResetting = 0;
-		int flagShadowShow = 0;
-
-		
-		float deltaT = 0.01;
-		float Re = 500.0;//レイノルズ数
-		float obsSpeed = 1.0;
-		float maxPrs = 5.0;
-		float maxOmg = 5.0;
-		float adjustH = 1.0;//表示上の渦の高さ調整
-		float adjustC = 2.0;//コースティクスの強さ調整
-		float waveSpeed = 2.0;//波の伝搬速度
-		float waveFreq = 1.0;
-		float waveAmp = 10.0;//波の振幅
-		float waveDrag = 0.1;
-		float waveHeight = 8.0;//水面の高さ
-		int sizeParticle = 3;
 		int numParticle = 1000;
+		Assist3D assist3d;
+		float deltaT = 0.01;
+		int flagWireframe = 0;
+		int flagShowParticle = 0;
+		float Re = 500.0;//レイノルズ数
+		int flagShadowShow = 0;
+		int flagCoordShow = 0;
 		float transparency = 0.8;//透明度
 		float nRatio = 1.0;//比屈折率
+		float waveHeight = 8.0;//水面の高さ
+		float waveAmp = 10.0;//波の振幅
+		float waveSpeed = 2.0;//波の伝搬速度
+		float waveFreq = 1.0;
+		float waveDrag = 0.1;
+		float maxOmg = 5.0;
+		int flagIdeal = 1;
+		int flagRotation = 0;//回転運動
+		int flagResetting = 0;
+		float obsSpeed = 1.0;
+		float maxPrs = 5.0;
+		float adjustH = 1.0;//表示上の渦の高さ調整
+		float adjustC = 2.0;//コースティクスの強さ調整
+		int sizeParticle = 3;
 
+		GLUI *glui, *glui2;
+
+	private:
 		//Pointers
 		GLUI_Panel *paraPanel;
 		GLUI_EditText *sizeX_edit;

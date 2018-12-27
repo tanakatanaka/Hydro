@@ -1,21 +1,65 @@
-﻿  Main.cpp
-c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(16): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 'fopen' の宣言を確認してください
-  MainView.cpp
-c:\programtest\hydrodynamics\trunk\source_vs2010\myglsl.h(16): error C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(208): note: 'fopen' の宣言を確認してください
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\mainview.cpp(26): error C3867: 'Assist3D::Resize': 非標準の構文です。メンバーにポインタを作成するには '&' を使用してください
-  MyGLUI .cpp
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(191): error C2065: 'flagObsStop': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(192): error C2065: 'flagResetting': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(193): error C3861: 'initData': 識別子が見つかりませんでした
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(197): error C2065: 'flagObsStop': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(199): error C3861: 'initObjectLength': 識別子が見つかりませんでした
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(200): error C2065: 'flagParamShow': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(219): error C2065: 'glui2': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(219): error C2227: '->show' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(219): note: 型は 'unknown-type' です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(223): error C2065: 'glui2': 定義されていない識別子です。
-c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(223): error C2227: '->hide' : 左側がクラス、構造体、共用体、ジェネリック型へのポインターではありません。
-  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(223): note: 型は 'unknown-type' です。
-  コードを生成中...
+﻿  MyGLUI .cpp
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(15): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(16): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(17): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(18): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(19): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(20): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(21): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(22): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(23): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(24): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(25): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(26): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(27): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(28): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(39): error C3861: 'drawSphere': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(48): error C3861: 'drawCube': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(57): error C3861: 'drawCylinder': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(68): error C3861: 'drawSuper': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(79): error C3861: 'drawSuper': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(87): error C3861: 'drawPlate': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(96): error C3861: 'drawFloorZ': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid_parameters.h(105): error C3861: 'drawFloorY': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(70): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\rigid.h(72): warning C4838: 'double' から 'float' への変換には縮小変換が必要です
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(204): error C3861: 'initData': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(212): error C3861: 'initObjectLength': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(433): error C3861: 'setFramebufferVelX': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(434): error C3861: 'setTextureVelY': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(435): error C3861: 'setFramebufferVelY': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(436): error C3861: 'setTextureWave': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(437): error C3861: 'setFramebufferWave': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(438): error C3861: 'setFramebufferCube': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(439): error C3861: 'setCubeMap': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(440): error C3861: 'setTextureCaus': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(450): error C2065: 'waveHeight': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(450): error C2440: '<function-style-cast>': 'initializer list' から 'Vector3D' に変換できません。
+  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(450): note: コンストラクターはソース型を持てません、またはコンストラクターのオーバーロードの解決があいまいです。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(456): error C2065: 'waveHeight': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(456): error C2440: '<function-style-cast>': 'initializer list' から 'Vector3D' に変換できません。
+  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(456): note: コンストラクターはソース型を持てません、またはコンストラクターのオーバーロードの解決があいまいです。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(458): error C3861: 'makeLowerTank': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(459): error C3861: 'makeUpperTank': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(461): error C2065: 'elapseTime1': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(462): error C2065: 'elapseTime2': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(463): error C2065: 'elapseTime3': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(472): error C2065: 'numParticle': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(478): error C3861: 'setTextureParticle': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(479): error C3861: 'setFramebufferParticle': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(486): error C2065: 'waveHeight': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(486): error C2065: 'rect': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(486): error C2228: '.obs_length' の左側はクラス、構造体、共用体でなければなりません
+  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(486): note: 型は 'unknown-type' です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(487): error C2065: 'waveHeight': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(487): error C2065: 'rect': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(487): error C2228: '.obs_length' の左側はクラス、構造体、共用体でなければなりません
+  c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(487): note: 型は 'unknown-type' です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(488): error C3861: 'makeLowerTank': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(489): error C3861: 'makeUpperTank': 識別子が見つかりませんでした
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(579): error C2065: 'CUBE_WIDTH': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(579): error C2065: 'CUBE_HEIGHT': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(591): error C2065: 'c_target': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(591): error C2228: '.name' の左側はクラス、構造体、共用体でなければなりません
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(591): error C2065: 'CUBE_WIDTH': 定義されていない識別子です。
+c:\programtest\hydrodynamics\trunk\source_vs2010\wavetest\wave\wave\source\myglui .cpp(591): error C2065: 'CUBE_HEIGHT': 定義されていない識別子です。
