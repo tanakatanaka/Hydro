@@ -7,6 +7,9 @@
 
 
 #include <windows.h>
+#include <cstdio>
+#include <memory>
+#include <vector>
 #include <math.h>
 #include <GL/glew.h>
 #include <GL/glui.h>

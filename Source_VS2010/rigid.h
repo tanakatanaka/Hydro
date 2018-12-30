@@ -1,6 +1,6 @@
 
 //rigid.h
-#include "../../rigid_parameters.h"
+#include "rigid_parameters.h"
 
 #define RIGID_NUM_MAX 20
 #define MAX_REPRE 30//‘½–Ê‘Ì‚Ì‘ã•\“_” 

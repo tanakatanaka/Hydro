@@ -95,16 +95,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Scource\Scene\Wave.cpp" />
     <ClCompile Include="Scource\stdafx.cpp" />
     <ClCompile Include="Scource\SubGLSL.cpp" />
-    <ClCompile Include="Scource\Wave.cpp" />
     <ClCompile Include="Scource\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Scource\myGLUI.h" />
+    <ClInclude Include="Scource\Scene\SceneBase.h" />
+    <ClInclude Include="Scource\Scene\Wave.h" />
     <ClInclude Include="Scource\stdafx.h" />
     <ClInclude Include="Scource\SubGLSL.h" />
-    <ClInclude Include="Scource\Wave.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
