@@ -10,5 +10,6 @@ int main(int argc, char** argv)
 	//ƒŠƒ“ƒN‚Æ‚©‚ğŠæ’£‚Á‚ÄŠO‚Å‚·‚Ü‚·
 	scene->Initialize(argc, argv);
 
+	scene->Finalize();
 	return 0;
 }

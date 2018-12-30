@@ -182,8 +182,6 @@ int Wave::Initialize(int argc, char** argv)
 
 	//イベント処理ループに入る
 	glutMainLoop();
-	
-	Finalize();
 
 	return 0;
 }
