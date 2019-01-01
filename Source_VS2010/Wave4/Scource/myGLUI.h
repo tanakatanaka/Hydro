@@ -34,6 +34,7 @@ int flagIdeal = 1;
 int flagShowParticle = 0;
 int flagCoordShow = 0;
 int flagObsStop = 0;
+int flagObsControl = 0;
 int flagRotation = 0;//‰ñ“]‰^“®
 int flagResetting = 0;
 int flagShadowShow = 0;
@@ -276,6 +277,7 @@ void setupGLUI()
 
 	calcPanel = new GLUI_Panel(glui, "Calculation" );
  	new GLUI_Checkbox(calcPanel, "Rotation", &flagRotation);
+	new GLUI_Checkbox(calcPanel, "Control", &flagObsControl);
 	startBtn = new GLUI_Button(calcPanel, "Start", START_ID, control_cb);
 	freezeBtn = new GLUI_Button(calcPanel, "Freeze", FREEZE_ID, control_cb);
 	stepBtn = new GLUI_Button(calcPanel, "Step", STEP_ID, control_cb);

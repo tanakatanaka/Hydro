@@ -32,6 +32,7 @@ GLSLによるシェーディング
 #include "../../../rigid.h"
 #include "../../../support3D.h"
 #include "../myGLUI.h"
+#include "../myKeyboard.h"
 #include"Wave.h"
 
 //関数のプロトタイプ宣言
@@ -66,6 +67,7 @@ void makeUpperTank();
 void makeLowerTank();
 void setTextureMatrix();
 void drawShadow();
+
 
 //仮想生物アニメーション
 #include "../../../myFish1.h"
@@ -103,7 +105,11 @@ Type g_type[NUM_MAX_X][NUM_MAX_Y]; //格子点のタイプ
 
 int NX, NY, NX1, NY1, NX2, NY2;
 float DX, DY;
-float direction = 1.0;//障害物直線移動方向
+
+
+//その他
+bool LastControl = false;
+
 
 //テクスチャー構造体(cube map)
 struct Target{
@@ -163,6 +169,9 @@ int Wave::Initialize(int argc, char** argv)
 	//マウス操作
 	glutMouseFunc(mouse);
 	glutMotionFunc(motion);
+	//キーボード操作
+	glutKeyboardFunc(Keyboard);
+
 	//再描画
 	GLUI_Master.set_glutIdleFunc( idle );
 	//初期設定
@@ -380,13 +389,13 @@ void initData()
 	numRigid = 11;
 	for(i = 0; i < numRigid; i++) rigid[i] = CRigid();
 	//障害物（円柱，球）
-	rigid[0].kind = CYLINDER;
+	rigid[0].kind = SPHERE;
 	rigid[0].color = RED;
 	rigid[0].vPos = Vector3D(-rect.size.x/2.0 + rect.obs_left, -rect.size.y/2.0 + rect.obs_posY, waveHeight+rect.obs_length/4.0);
 	rigid[0].vSize = Vector3D(rect.obs_radius*2.0, rect.obs_radius*2.0, rect.obs_length/2.0);
 
 	//下半分(水面下の障害物）
-	rigid[1].kind = CYLINDER;
+	rigid[1].kind = SPHERE;
 	rigid[1].color = BLUE;
 	rigid[1].vPos = Vector3D(-rect.size.x/2.0 + rect.obs_left, -rect.size.y/2.0 + rect.obs_posY, waveHeight-rect.obs_length/4.0);
 	rigid[1].vSize = Vector3D(rect.obs_radius*2.0, rect.obs_radius*2.0, rect.obs_length/2.0);
@@ -676,13 +685,13 @@ void display(void)
 	
 	int i, j, k;
 
-	if(flagStart==true && flagFreeze == false) 
+	if (flagStart == true && flagFreeze == false)
 	{
 		//移動障害物表面の速度境界条件
 		for (i = 1; i < NX; i++)
-			for (j = 0; j <= NY; j++) 
+			for (j = 0; j <= NY; j++)
 			{
-				if(g_type[i][j] < OBS_LEFT) continue;
+				if (g_type[i][j] < OBS_LEFT) continue;
 				k = 4 * (i + j * texWidth);
 				velX[k] = rigid[0].vVel.x;
 				velY[k] = rigid[0].vVel.y;
@@ -690,59 +699,72 @@ void display(void)
 
 		//圧力境界条件
 		for (i = 0; i <= NX; i++)
-			for (j = 0; j <= NY; j++) 
+			for (j = 0; j <= NY; j++)
 			{
 				k = 4 * (i + j * texWidth) + 3;//圧力
-				if(g_type[i][j] == INSIDE) continue;
-				else if(g_type[i][j] == LEFT)  velX[k] = 0.0;//-x
-				else if(g_type[i][j] == RIGHT) velX[k] = 0.0;//+x
-				else if(g_type[i][j] == TOP) velX[k] = 0.0;//+y
-				else if(g_type[i][j] == BOTTOM) velX[k] = 0.0;//-y
-				else if(g_type[i][j] == OBS_LEFT) velX[k] = velX[4 * (i-1 + j * texWidth) + 3];
-				else if(g_type[i][j] == OBS_RIGHT) velX[k] = velX[4 * (i+1 + j * texWidth) + 3];
-				else if(g_type[i][j] == OBS_TOP) velX[k] = velX[4 * (i + (j+1) * texWidth) + 3];
-				else if(g_type[i][j] == OBS_BOTTOM) velX[k] = velX[4 * (i + (j-1) * texWidth) + 3];
-				else if(g_type[i][j] == OBS_UL) velX[k] = velX[4 * (i-1 + (j+1) * texWidth) + 3];
-				else if(g_type[i][j] == OBS_UR) velX[k] = velX[4 * (i+1 + (j+1) * texWidth) + 3];
-				else if(g_type[i][j] == OBS_LL) velX[k] = velX[4 * (i-1 + (j-1) * texWidth) + 3];
-				else if(g_type[i][j] == OBS_LR) velX[k] = velX[4 * (i+1 + (j-1) * texWidth) + 3];
+				if (g_type[i][j] == INSIDE) continue;
+				else if (g_type[i][j] == LEFT)  velX[k] = 0.0;//-x
+				else if (g_type[i][j] == RIGHT) velX[k] = 0.0;//+x
+				else if (g_type[i][j] == TOP) velX[k] = 0.0;//+y
+				else if (g_type[i][j] == BOTTOM) velX[k] = 0.0;//-y
+				else if (g_type[i][j] == OBS_LEFT) velX[k] = velX[4 * (i - 1 + j * texWidth) + 3];
+				else if (g_type[i][j] == OBS_RIGHT) velX[k] = velX[4 * (i + 1 + j * texWidth) + 3];
+				else if (g_type[i][j] == OBS_TOP) velX[k] = velX[4 * (i + (j + 1) * texWidth) + 3];
+				else if (g_type[i][j] == OBS_BOTTOM) velX[k] = velX[4 * (i + (j - 1) * texWidth) + 3];
+				else if (g_type[i][j] == OBS_UL) velX[k] = velX[4 * (i - 1 + (j + 1) * texWidth) + 3];
+				else if (g_type[i][j] == OBS_UR) velX[k] = velX[4 * (i + 1 + (j + 1) * texWidth) + 3];
+				else if (g_type[i][j] == OBS_LL) velX[k] = velX[4 * (i - 1 + (j - 1) * texWidth) + 3];
+				else if (g_type[i][j] == OBS_LR) velX[k] = velX[4 * (i + 1 + (j - 1) * texWidth) + 3];
 			}
 
 		setTextureVelX();
 		setFramebufferVelX();
 		setTextureVelY();
 		setFramebufferVelY();
-		
+
 		renewVelX(); //速度Xと圧力の更新
 		renewVelY(); //速度Yと渦度の更新
 		renewWaveVel();//波のｚ軸方向速度の更新
 		renewWavePos();//波の高さの更新
 
 		//particle
-		for(j = 0; j < texHeight; j++)
-		for(i = 0; i < texWidth; i++)
-		{
-			k = i + j * texWidth;
-			if(k > numParticle) break;
-			//速度X
-			if(particle[4 * k + 0] > rect.size.x/2.0 || particle[4 * k + 0] < -rect.size.x/2.0 || 
-			   particle[4 * k + 1] > rect.size.y/2.0 || particle[4 * k + 1] < -rect.size.y/2.0)
+		for (j = 0; j < texHeight; j++)
+			for (i = 0; i < texWidth; i++)
 			{
-				particle[4 * k + 0] = getRandom(-rect.size.x/2.0, rect.size.x/2.0);
-				particle[4 * k + 1] = getRandom(-rect.size.y/2.0, rect.size.y/2.0);
+				k = i + j * texWidth;
+				if (k > numParticle) break;
+				//速度X
+				if (particle[4 * k + 0] > rect.size.x / 2.0 || particle[4 * k + 0] < -rect.size.x / 2.0 ||
+					particle[4 * k + 1] > rect.size.y / 2.0 || particle[4 * k + 1] < -rect.size.y / 2.0)
+				{
+					particle[4 * k + 0] = getRandom(-rect.size.x / 2.0, rect.size.x / 2.0);
+					particle[4 * k + 1] = getRandom(-rect.size.y / 2.0, rect.size.y / 2.0);
+				}
 			}
-		}
 		setTextureParticle();
 		setFramebufferParticle();
 
 		renewParticle();//粒子位置の更新
 
-		if(flagStep) flagFreeze = true;
+		if (flagStep) flagFreeze = true;
 		elapseTime2 += dt;
 		elapseTime3 += deltaT;
 
-		calcObsPos();
+		if (true == flagObsControl)
+		{
+			if (LastControl == true)
+			{
+				rigid[0].vVel = Vector3D();
+			}
 
+			LastControl = !LastControl;
+
+			//calcObsPos();
+		}
+		else
+		{
+			calcObsPos();
+		}
 	}
 
 	//環境マップのテクスチャ作成
@@ -1208,12 +1230,18 @@ void drawParticles()
 	glEnable(GL_LIGHTING);
 }
 
+void ControlObjPos()
+{
+	int a = 0;
+}
+
 void calcObsPos()
 {
-	if(flagObsStop) { rigid[0].vVel = Vector3D();  return; }
-
-	Vector3D left;//ダクトの左端および下端からの距離
-//	float direction = 1.0;//障害物直線移動方向
+	if(flagObsStop) 
+	{ 
+		rigid[0].vVel = Vector3D();  
+		return; 
+	}
 
 	float R = rect.size.x / 2.0 - rect.obs_left;//回転半径
 	
@@ -1229,56 +1257,64 @@ void calcObsPos()
 		rigid[0].vVel.x = direction * obsSpeed;
 	}
 	rigid[0].vPos += rigid[0].vVel * deltaT;
+	CalcLine();
+}
+
+void CalcLine()
+{
+	Vector3D left;//ダクトの左端および下端からの距離
+
 	//水面下の障害物の像
 	rigid[1].vPos = rigid[0].vPos;
-	rigid[0].vPos.z = waveHeight + rigid[1].vSize.z/2.0;
-	rigid[1].vPos.z = waveHeight - rigid[1].vSize.z/2.0;
-	left.x = rigid[0].vPos.x + rect.size.x/2.0;
-	left.y = rigid[0].vPos.y + rect.size.y/2.0;
+	rigid[0].vPos.z = waveHeight + rigid[1].vSize.z / 2.0;
+	rigid[1].vPos.z = waveHeight - rigid[1].vSize.z / 2.0;
+	left.x = rigid[0].vPos.x + rect.size.x / 2.0;
+	left.y = rigid[0].vPos.y + rect.size.y / 2.0;
 
 	//格子点のタイプ
 	int i, j;
-	float eps = DX/2.0;
+	float eps = DX / 2.0;
 	float x, y, x1, x2, y1, y2, x0, y0, r, r0;
 	x0 = left.x;//rect.obs_left;//円柱の中心
 	y0 = left.y;//rect.size.y/2.0;
 	r0 = rect.obs_radius;
-	for(i = 1; i < NX; i++)
-		for(j = 1; j < NY; j++)
+	for (i = 1; i < NX; i++)
+		for (j = 1; j < NY; j++)
 		{
 			g_type[i][j] = INSIDE;//内点
 			x = (float)i * DX;
 			y = (float)j * DY;
-			if(y < y0 - r0 - DY) continue;
-			if(y > y0 + r0 + DY) continue;
-			if(x < x0 - r0 - DX) continue;
-			if(x > x0 + r0 + DX) continue;
+			if (y < y0 - r0 - DY) continue;
+			if (y > y0 + r0 + DY) continue;
+			if (x < x0 - r0 - DX) continue;
+			if (x > x0 + r0 + DX) continue;
 
 			r = sqrt((x - x0) * (x - x0) + (y - y0) * (y - y0));
-			if(r > r0 + eps) continue;
-			if( r <= r0 ) g_type[i][j] = OBSTACLE;//ここでは境界を含む
+			if (r > r0 + eps) continue;
+			if (r <= r0) g_type[i][j] = OBSTACLE;//ここでは境界を含む
 
-			if( fabs(y - y0 - r0) < eps ) g_type[i][j] = OBS_TOP;
-			else if( fabs(y - y0 + r0) < eps ) g_type[i][j] = OBS_BOTTOM;
-			else if( fabs(x - x0 + r0) < eps ) g_type[i][j] = OBS_LEFT;
-			else if( fabs(x - x0 - r0) < eps ) g_type[i][j] = OBS_RIGHT;
+			if (fabs(y - y0 - r0) < eps) g_type[i][j] = OBS_TOP;
+			else if (fabs(y - y0 + r0) < eps) g_type[i][j] = OBS_BOTTOM;
+			else if (fabs(x - x0 + r0) < eps) g_type[i][j] = OBS_LEFT;
+			else if (fabs(x - x0 - r0) < eps) g_type[i][j] = OBS_RIGHT;
 			else
 			{
 				x1 = x0 - sqrt(r0 * r0 - (y - y0) * (y - y0));//左側交点
 				x2 = x0 + sqrt(r0 * r0 - (y - y0) * (y - y0));//右側交点
 				y1 = y0 - sqrt(r0 * r0 - (x - x0) * (x - x0));//下側交点
 				y2 = y0 + sqrt(r0 * r0 - (x - x0) * (x - x0));//上側交点
-				if(i == int(x1/DX + 0.5) && y > y0 ) g_type[i][j] = OBS_UL;//左上
-				if(j == int(y2/DY + 0.5) && x < x0 ) g_type[i][j] = OBS_UL;//左上
-				if(i == int(x1/DX + 0.5) && y < y0 ) g_type[i][j] = OBS_LL;//左下
-				if(j == int(y1/DY + 0.5) && x < x0 ) g_type[i][j] = OBS_LL;//左下
-				if(i == int(x2/DX + 0.5) && y > y0) g_type[i][j] = OBS_UR;//右上
-				if(j == int(y2/DY + 0.5) && x > x0) g_type[i][j] = OBS_UR;//右上
-				if(i == int(x2/DX + 0.5) && y < y0) g_type[i][j] = OBS_LR;//右下
-				if(j == int(y1/DY + 0.5) && x > x0) g_type[i][j] = OBS_LR;//右下
+				if (i == int(x1 / DX + 0.5) && y > y0) g_type[i][j] = OBS_UL;//左上
+				if (j == int(y2 / DY + 0.5) && x < x0) g_type[i][j] = OBS_UL;//左上
+				if (i == int(x1 / DX + 0.5) && y < y0) g_type[i][j] = OBS_LL;//左下
+				if (j == int(y1 / DY + 0.5) && x < x0) g_type[i][j] = OBS_LL;//左下
+				if (i == int(x2 / DX + 0.5) && y > y0) g_type[i][j] = OBS_UR;//右上
+				if (j == int(y2 / DY + 0.5) && x > x0) g_type[i][j] = OBS_UR;//右上
+				if (i == int(x2 / DX + 0.5) && y < y0) g_type[i][j] = OBS_LR;//右下
+				if (j == int(y1 / DY + 0.5) && x > x0) g_type[i][j] = OBS_LR;//右下
 			}
 		}
 }
+
 
 void setTextureMatrix()
 {
