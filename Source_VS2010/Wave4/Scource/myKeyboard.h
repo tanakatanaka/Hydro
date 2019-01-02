@@ -22,6 +22,7 @@ void Keyboard(unsigned char key, int x, int y)
 		{
 			direction = -1.0;
 		}
+		rigid[0].vVel.x = direction * obsSpeed * 5;
 		
 		break;
 	case 's':
@@ -29,18 +30,18 @@ void Keyboard(unsigned char key, int x, int y)
 		{
 			direction = 1.0;
 		}
-		
+		rigid[0].vVel.x = direction * obsSpeed * 5;
 		break;
 	case 'a':
-		R = rect.size.x / 2.0 - rect.obs_left;//‰ñ“]”¼Œa
-		rigid[0].vVel.x = obsSpeed * rigid[0].vPos.y / R;
-		rigid[0].vVel.y = -obsSpeed * rigid[0].vPos.x / R;
+		R = rect.size.x / 6.0 - rect.obs_left;//‰ñ“]”¼Œa
+		rigid[0].vVel.x = obsSpeed * 5 * rigid[0].vPos.y / R;
+		rigid[0].vVel.y = -obsSpeed * 5 * rigid[0].vPos.x / R;
 
 		break;
 	case 'd':
-		R = rect.size.x / 2.0 + rect.obs_left;//‰ñ“]”¼Œa
-		rigid[0].vVel.x = -obsSpeed * rigid[0].vPos.y / R;
-		rigid[0].vVel.y = obsSpeed * rigid[0].vPos.x / R;
+		R = rect.size.x / 6.0 + rect.obs_left;//‰ñ“]”¼Œa
+		rigid[0].vVel.x = -obsSpeed * 5 * rigid[0].vPos.y / R;
+		rigid[0].vVel.y = obsSpeed * 5 * rigid[0].vPos.x / R;
 
 		break;
 
@@ -53,7 +54,7 @@ void Keyboard(unsigned char key, int x, int y)
 		break;
 	}
 
-	rigid[0].vVel.x = direction * obsSpeed;
+	
 	rigid[0].vPos += rigid[0].vVel * deltaT;
 	CalcLine();
 }

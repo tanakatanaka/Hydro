@@ -758,8 +758,6 @@ void display(void)
 			}
 
 			LastControl = !LastControl;
-
-			//calcObsPos();
 		}
 		else
 		{
@@ -1230,9 +1228,11 @@ void drawParticles()
 	glEnable(GL_LIGHTING);
 }
 
-void ControlObjPos()
+
+//ƒ‚ƒfƒ‹‚ÌƒWƒƒƒ“ƒv
+void Jump()
 {
-	int a = 0;
+
 }
 
 void calcObsPos()
