@@ -13,7 +13,7 @@ void Keyboard(unsigned char key, int x, int y)
 		return;
 	}
 
-	float R = rect.size.x / 2.0 - rect.obs_left;//‰ñ“]”¼Œa
+	float R;
 
 	switch (key)
 	{
@@ -32,10 +32,19 @@ void Keyboard(unsigned char key, int x, int y)
 		
 		break;
 	case 'a':
+		R = rect.size.x / 2.0 - rect.obs_left;//‰ñ“]”¼Œa
 		rigid[0].vVel.x = obsSpeed * rigid[0].vPos.y / R;
+		rigid[0].vVel.y = -obsSpeed * rigid[0].vPos.x / R;
 
 		break;
 	case 'd':
+		R = rect.size.x / 2.0 + rect.obs_left;//‰ñ“]”¼Œa
+		rigid[0].vVel.x = -obsSpeed * rigid[0].vPos.y / R;
+		rigid[0].vVel.y = obsSpeed * rigid[0].vPos.x / R;
+
+		break;
+
+	case 'z':
 		rigid[0].vVel.y = -obsSpeed * rigid[0].vPos.x / R;
 
 		break;
